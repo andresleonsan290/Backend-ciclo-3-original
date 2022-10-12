@@ -14,7 +14,7 @@
 	<name>ciclo3</name>
 	<description>Backend ciclo3</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

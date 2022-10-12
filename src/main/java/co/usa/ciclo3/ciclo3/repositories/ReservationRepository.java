@@ -30,7 +30,7 @@ public class ReservationRepository {
         }
         else{
             Optional<Reservation> reservationAux = reservationCrudRepository.findById(reservation.getIdReservation());
-            if (reservationAux.isEmpty()) {
+            if (!reservationAux.isPresent()) {
                 return reservationCrudRepository.save(reservation);
             }
             else{
@@ -41,14 +41,14 @@ public class ReservationRepository {
     
     //DELETE
     public void deleteReservation(int id){
-        if (!reservationCrudRepository.findById(id).isEmpty()) {
+        if (reservationCrudRepository.findById(id).isPresent()) {
             reservationCrudRepository.deleteById(id);
         }
     }
     
     //PUT
     public void updateReservation(int id, Reservation reservation){
-        if(!reservationCrudRepository.findById(id).isEmpty()){
+        if(reservationCrudRepository.findById(id).isPresent()){
             Reservation reservationDB = reservationCrudRepository.findById(id).get();
             if (reservation.getStartDate() != null) {
                 reservation.setStartDate(reservation.getStartDate() + "T00:00:00:000+00:00");

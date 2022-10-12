@@ -28,7 +28,7 @@ public class AdminRepository {
         }
         else{
             Optional<Admin> adminAux = adminCrudRepository.findById(admin.getId());
-            if (adminAux.isEmpty()) {
+            if (!adminAux.isPresent()) {
                 return adminCrudRepository.save(admin);
             }
             else{
@@ -39,14 +39,14 @@ public class AdminRepository {
     
     //DELETE
     public void deleteAdmin(int id){
-        if (!adminCrudRepository.findById(id).isEmpty()) {
+        if (adminCrudRepository.findById(id).isPresent()) {
             adminCrudRepository.deleteById(id);
         }
     }
     
     //PUT
     public void updateAdmin(int id, Admin admin){
-        if(!adminCrudRepository.findById(id).isEmpty()){
+        if(adminCrudRepository.findById(id).isPresent()){
             Admin adminDB = adminCrudRepository.findById(id).get();
             if (admin.getName() != null) {
                 adminDB.setName(admin.getName());

@@ -28,7 +28,7 @@ public class CabinRepository {
         }
         else{
             Optional<Cabin> cabinAux = cabinCrudRepository.findById(cabin.getId());
-            if (cabinAux.isEmpty()) {
+            if (!cabinAux.isPresent()) {
                 return cabinCrudRepository.save(cabin);
             }
             else{
@@ -39,14 +39,14 @@ public class CabinRepository {
     
     //DELETE
     public void deleteCabin(int id){
-        if (!cabinCrudRepository.findById(id).isEmpty()) {
+        if (cabinCrudRepository.findById(id).isPresent()) {
             cabinCrudRepository.deleteById(id);
         }
     }
     
     //PUT
     public void updateCabin(int id, Cabin cabin){
-        if(!cabinCrudRepository.findById(id).isEmpty()){
+        if(cabinCrudRepository.findById(id).isPresent()){
             Cabin cabinDB = cabinCrudRepository.findById(id).get();
             if (cabin.getBrand() != null) {
                 cabinDB.setBrand(cabin.getBrand());

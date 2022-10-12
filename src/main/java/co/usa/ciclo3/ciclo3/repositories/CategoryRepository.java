@@ -28,7 +28,7 @@ public class CategoryRepository {
         }
         else{
             Optional<Category> categoryAux = categoryCrudRepository.findById(category.getId());
-            if (categoryAux.isEmpty()) {
+            if (!categoryAux.isPresent()) {
                 return categoryCrudRepository.save(category);
             }
             else{
@@ -39,14 +39,14 @@ public class CategoryRepository {
     
     //DELETE
     public void deleteCategory(int id){
-        if (!categoryCrudRepository.findById(id).isEmpty()) {
+        if (categoryCrudRepository.findById(id).isPresent()) {
             categoryCrudRepository.deleteById(id);
         }
     }
     
     //PUT
     public void updateCategory(int id, Category category){
-        if(!categoryCrudRepository.findById(id).isEmpty()){
+        if(categoryCrudRepository.findById(id).isPresent()){
             Category categoryDB = categoryCrudRepository.findById(id).get();
             if (category.getName() != null) {
                 categoryDB.setName(category.getName());

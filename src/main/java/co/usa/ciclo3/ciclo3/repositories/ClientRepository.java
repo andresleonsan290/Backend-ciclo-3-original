@@ -28,7 +28,7 @@ public class ClientRepository {
         }
         else{
             Optional<Client> clientAux = clientCrudRepository.findById(client.getIdClient());
-            if (clientAux.isEmpty()) {
+            if (!clientAux.isPresent()) {
                 return clientCrudRepository.save(client);
             }
             else{
@@ -39,14 +39,14 @@ public class ClientRepository {
     
     //DELETE
     public void deleteClient(int id){
-        if (!clientCrudRepository.findById(id).isEmpty()) {
+        if (clientCrudRepository.findById(id).isPresent()) {
             clientCrudRepository.deleteById(id);
         }
     }
     
     //PUT
     public void updateClient(int id, Client client){
-        if(!clientCrudRepository.findById(id).isEmpty()){
+        if(clientCrudRepository.findById(id).isPresent()){
             Client clientDB = clientCrudRepository.findById(id).get();
             if (client.getName() != null) {
                 clientDB.setName(client.getName());

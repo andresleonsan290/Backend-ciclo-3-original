@@ -28,7 +28,7 @@ public class ScoreRepository {
         }
         else{
             Optional<Score> scoreAux = scoreCrudRepository.findById(score.getIdScore());
-            if (scoreAux.isEmpty()) {
+            if (!scoreAux.isPresent()) {
                 return scoreCrudRepository.save(score);
             }
             else{
@@ -39,14 +39,14 @@ public class ScoreRepository {
     
     //DELETE
     public void deleteScore(int id){
-        if (!scoreCrudRepository.findById(id).isEmpty()) {
+        if (scoreCrudRepository.findById(id).isPresent()) {
             scoreCrudRepository.deleteById(id);
         }
     }
     
     //PUT
     public void updateScore(int id, Score score){
-        if(!scoreCrudRepository.findById(id).isEmpty()){
+        if(scoreCrudRepository.findById(id).isPresent()){
             Score scoreDB = scoreCrudRepository.findById(id).get();
             if (score.getStars() != null) {
                 scoreDB.setStars(score.getStars());

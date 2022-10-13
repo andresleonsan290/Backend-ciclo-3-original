@@ -22,11 +22,11 @@ public class Cabin implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     
-    @Column(name = "brand")
-    private String brand;
-    
     @Column(name = "name")
     private String name;
+    
+    @Column(name = "brand")
+    private String brand;
     
     @Column(name = "rooms")
     private Integer rooms;

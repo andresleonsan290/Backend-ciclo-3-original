@@ -23,8 +23,8 @@ public class ReservationRepository {
     
     //POST
     public Reservation saveReservation(Reservation reservation){
-        reservation.setStartDate(reservation.getStartDate() + "T00:00:00:000+00:00");
-        reservation.setDevolutionDate(reservation.getDevolutionDate() + "T00:00:00:000+00:00");
+        reservation.setStartDate(reservation.getStartDate() + "T00:00:00.000+00:00");
+        reservation.setDevolutionDate(reservation.getDevolutionDate() + "T00:00:00.000+00:00");
         if(reservation.getIdReservation()==null){
             return reservationCrudRepository.save(reservation);
         }

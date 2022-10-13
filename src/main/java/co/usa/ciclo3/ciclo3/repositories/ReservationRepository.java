@@ -51,11 +51,11 @@ public class ReservationRepository {
         if(reservationCrudRepository.findById(id).isPresent()){
             Reservation reservationDB = reservationCrudRepository.findById(id).get();
             if (reservation.getStartDate() != null) {
-                reservation.setStartDate(reservation.getStartDate() + "T00:00:00:000+00:00");
+                reservation.setStartDate(reservation.getStartDate() + "T00:00:00.000+00:00");
                 reservationDB.setStartDate(reservation.getStartDate());
             }
             if (reservation.getDevolutionDate() != null) {
-                reservation.setDevolutionDate(reservation.getDevolutionDate() + "T00:00:00:000+00:00");
+                reservation.setDevolutionDate(reservation.getDevolutionDate() + "T00:00:00.000+00:00");
                 reservationDB.setDevolutionDate(reservation.getDevolutionDate());
             }
             if (reservation.getStatus() != null) {

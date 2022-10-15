@@ -45,12 +45,14 @@ public class CategoryController {
         return categoryService.saveCategory(category);
     }
     
+    @CrossOrigin(origins = "*")
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteCategory(@PathVariable("id") int id){
         categoryService.deleteCategory(id);
     }
     
+    @CrossOrigin(origins = "*")
     @PutMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
     public void updateCategory(@RequestBody Category category){

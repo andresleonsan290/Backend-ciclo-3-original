@@ -45,12 +45,14 @@ public class ClientController {
         return clientService.saveClient(client);
     }
     
+    @CrossOrigin(origins = "*")
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteClient(@PathVariable("id") int id){
         clientService.deleteClient(id);
     }
     
+    @CrossOrigin(origins = "*")
     @PutMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
     public void updateClient(@RequestBody Client client){

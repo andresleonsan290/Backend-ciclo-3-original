@@ -45,12 +45,14 @@ public class CabinController {
         return cabinService.saveCabin(cabin);
     }
     
+    @CrossOrigin(origins = "*")
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteCabin(@PathVariable("id") int id){
         cabinService.deleteCabin(id);
     }
     
+    @CrossOrigin(origins = "*")
     @PutMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
     public void updateCabin(@RequestBody Cabin cabin){

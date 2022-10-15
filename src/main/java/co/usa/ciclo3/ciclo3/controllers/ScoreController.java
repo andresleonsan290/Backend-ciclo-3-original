@@ -45,12 +45,14 @@ public class ScoreController {
         return scoreService.saveScore(score);
     }
     
+    @CrossOrigin(origins = "*")
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteScore(@PathVariable("id") int id){
         scoreService.deleteScore(id);
     }
     
+    @CrossOrigin(origins = "*")
     @PutMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
     public void updateScore(@RequestBody Score score){

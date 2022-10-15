@@ -45,12 +45,14 @@ public class AdminController {
         return adminService.saveAdmin(admin);
     }
     
+    @CrossOrigin(origins = "*")
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteAdmin(@PathVariable("id") int id){
         adminService.deleteAdmin(id);
     }
     
+    @CrossOrigin(origins = "*")
     @PutMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
     public void updateAdmin(@RequestBody Admin admin){

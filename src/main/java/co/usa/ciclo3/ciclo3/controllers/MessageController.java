@@ -45,12 +45,14 @@ public class MessageController {
         return messageService.saveMessage(message);
     }
     
+    @CrossOrigin(origins = "*")
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteMessage(@PathVariable("id") int id){
         messageService.deleteMessage(id);
     }
     
+    @CrossOrigin(origins = "*")
     @PutMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
     public void updateMessage(@RequestBody Message message){

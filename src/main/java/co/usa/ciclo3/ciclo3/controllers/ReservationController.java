@@ -45,12 +45,14 @@ public class ReservationController {
         return reservationService.saveReservation(reservation);
     }
     
+    @CrossOrigin(origins = "*")
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteReservation(@PathVariable("id") int id){
         reservationService.deleteReservation(id);
     }
     
+    @CrossOrigin(origins = "*")
     @PutMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
     public void updateReservation(@RequestBody Reservation reservation){

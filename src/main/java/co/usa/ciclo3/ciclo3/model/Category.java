@@ -9,8 +9,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -30,18 +28,12 @@ public class Category implements Serializable{
 
     
     //***** RELACIONES *****:
-    /*@OneToMany(mappedBy = "category", cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy = "category", cascade = CascadeType.PERSIST)
     @JsonIgnoreProperties("category")
-    private List<Cabin> cabins;*/
-    
-    @ManyToOne(optional = false)
-    @JsonIgnoreProperties("categories")
-	@JoinColumn(name = "cabin_id")
-	private Cabin cabin;
+    private List<Cabin> cabins;
 
     
     //*****GETTERS Y SETTERS
-
     public Integer getId() {
         return id;
     }
@@ -66,12 +58,11 @@ public class Category implements Serializable{
         this.description = description;
     }
 
-    public Cabin getCabin() {
-        return cabin;
+    public List<Cabin> getCabins() {
+        return cabins;
     }
 
-    public void setCabin(Cabin cabin) {
-        this.cabin = cabin;
-    }
-    
+    public void setCabins(List<Cabin> cabins) {
+        this.cabins = cabins;
+    }    
 }

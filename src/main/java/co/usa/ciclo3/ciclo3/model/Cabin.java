@@ -12,7 +12,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -38,14 +37,10 @@ public class Cabin implements Serializable{
     
     //***** RELACIONES *****:
     //Varias cabañas pueden tener una categoría en común
-    /*@ManyToOne(optional = false)
+    @ManyToOne(optional = false)
     @JsonIgnoreProperties("cabins")
 	@JoinColumn(name = "category_id")
-	private Category category;*/
-    
-    @OneToOne(mappedBy = "cabin", cascade = CascadeType.PERSIST)
-    @JsonIgnoreProperties("cabin")
-    private Category category;
+	private Category category;
     
     // Una cabaña puede tener muchas Reservation y Messages.
     @OneToMany(mappedBy = "cabin", cascade = CascadeType.PERSIST)

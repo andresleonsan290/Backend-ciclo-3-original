@@ -16,6 +16,7 @@ co\usa\ciclo3\ciclo3\controllers\MessageController.class
 co\usa\ciclo3\ciclo3\model\Category.class
 co\usa\ciclo3\ciclo3\service\AdminService.class
 co\usa\ciclo3\ciclo3\repositories\ClientRepository.class
+co\usa\ciclo3\ciclo3\model\custom\StatusAmount.class
 co\usa\ciclo3\ciclo3\repositories\crud\CabinCrudRepository.class
 co\usa\ciclo3\ciclo3\service\ClientService.class
 co\usa\ciclo3\ciclo3\controllers\ScoreController.class
@@ -34,3 +35,4 @@ co\usa\ciclo3\ciclo3\model\Reservation.class
 co\usa\ciclo3\ciclo3\service\CategoryService.class
 co\usa\ciclo3\ciclo3\model\Cabin.class
 co\usa\ciclo3\ciclo3\service\ReservationService.class
+co\usa\ciclo3\ciclo3\model\custom\CountClient.class

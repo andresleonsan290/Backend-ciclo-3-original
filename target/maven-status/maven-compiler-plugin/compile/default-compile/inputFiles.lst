@@ -4,12 +4,14 @@ C:\Users\andre\Downloads\Retos Duvan\Ciclo 3\RETO 3\backend ciclo 3\src\main\jav
 C:\Users\andre\Downloads\Retos Duvan\Ciclo 3\RETO 3\backend ciclo 3\src\main\java\co\usa\ciclo3\ciclo3\model\Message.java
 C:\Users\andre\Downloads\Retos Duvan\Ciclo 3\RETO 3\backend ciclo 3\src\main\java\co\usa\ciclo3\ciclo3\service\CategoryService.java
 C:\Users\andre\Downloads\Retos Duvan\Ciclo 3\RETO 3\backend ciclo 3\src\main\java\co\usa\ciclo3\ciclo3\service\AdminService.java
+C:\Users\andre\Downloads\Retos Duvan\Ciclo 3\RETO 3\backend ciclo 3\src\main\java\co\usa\ciclo3\ciclo3\model\custom\StatusAmount.java
 C:\Users\andre\Downloads\Retos Duvan\Ciclo 3\RETO 3\backend ciclo 3\src\main\java\co\usa\ciclo3\ciclo3\repositories\crud\AdminCrudRepository.java
 C:\Users\andre\Downloads\Retos Duvan\Ciclo 3\RETO 3\backend ciclo 3\src\main\java\co\usa\ciclo3\ciclo3\repositories\MessageRepository.java
 C:\Users\andre\Downloads\Retos Duvan\Ciclo 3\RETO 3\backend ciclo 3\src\main\java\co\usa\ciclo3\ciclo3\model\Score.java
 C:\Users\andre\Downloads\Retos Duvan\Ciclo 3\RETO 3\backend ciclo 3\src\main\java\co\usa\ciclo3\ciclo3\repositories\crud\ReservationCrudRepository.java
 C:\Users\andre\Downloads\Retos Duvan\Ciclo 3\RETO 3\backend ciclo 3\src\main\java\co\usa\ciclo3\ciclo3\repositories\crud\CategoryCrudRepository.java
 C:\Users\andre\Downloads\Retos Duvan\Ciclo 3\RETO 3\backend ciclo 3\src\main\java\co\usa\ciclo3\ciclo3\controllers\CategoryController.java
+C:\Users\andre\Downloads\Retos Duvan\Ciclo 3\RETO 3\backend ciclo 3\src\main\java\co\usa\ciclo3\ciclo3\model\custom\CountClient.java
 C:\Users\andre\Downloads\Retos Duvan\Ciclo 3\RETO 3\backend ciclo 3\src\main\java\co\usa\ciclo3\ciclo3\service\ScoreService.java
 C:\Users\andre\Downloads\Retos Duvan\Ciclo 3\RETO 3\backend ciclo 3\src\main\java\co\usa\ciclo3\ciclo3\model\Admin.java
 C:\Users\andre\Downloads\Retos Duvan\Ciclo 3\RETO 3\backend ciclo 3\src\main\java\co\usa\ciclo3\ciclo3\repositories\CabinRepository.java

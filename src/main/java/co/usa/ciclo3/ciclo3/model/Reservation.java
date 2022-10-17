@@ -2,6 +2,7 @@ package co.usa.ciclo3.ciclo3.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.io.Serializable;
+import java.util.Date;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -22,10 +23,10 @@ public class Reservation implements Serializable{
     private Integer idReservation;
 
     @Column(name = "startDate")
-    private String startDate;
+    private Date startDate;
 
     @Column(name = "devolutionDate")
-    private String devolutionDate;
+    private Date devolutionDate;
     
     @Column(name = "status")
     private String status;
@@ -62,19 +63,19 @@ public class Reservation implements Serializable{
         this.idReservation = idReservation;
     }
 
-    public String getStartDate() {
+    public Date getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(String startDate) {
+    public void setStartDate(Date startDate) {
         this.startDate = startDate;
     }
 
-    public String getDevolutionDate() {
+    public Date getDevolutionDate() {
         return devolutionDate;
     }
 
-    public void setDevolutionDate(String devolutionDate) {
+    public void setDevolutionDate(Date devolutionDate) {
         this.devolutionDate = devolutionDate;
     }
 
@@ -109,4 +110,6 @@ public class Reservation implements Serializable{
     public void setScore(Score score) {
         this.score = score;
     }
+
+    
 }
